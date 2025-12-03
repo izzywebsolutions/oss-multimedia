@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-midnight: #0F0F1A;
+  --color-lagosgold: #E8B923;
+  --color-emerald: #006633;
+  --color-warmgray: #94A3B8;
+}
+
+html, body, #root { height: 100%; }
+
+body { background: var(--color-midnight); }
+
+.font-clash { font-family: 'Clash Display', ui-sans-serif, system-ui; }
+.font-satoshi { font-family: 'Satoshi', ui-sans-serif, system-ui; }
+
+/***** Utilities *****/
+.container-max { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+.gold-btn { @apply bg-lagosgold text-black hover:brightness-110 transition-colors; }
+.green-btn { @apply bg-emerald text-white hover:brightness-110 transition-colors; }
+.link-underline { @apply underline decoration-lagosgold underline-offset-4 hover:opacity-80; }
+
+/***** Video Hero Fixes *****/
+.video-bg { position: absolute; inset: 0; overflow: hidden; }
+.video-bg video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45) saturate(1.1); }
+.hero-overlay { position: relative; z-index: 1; }
+
+/***** Scrollbar *****/
+*::-webkit-scrollbar { width: 8px; }
+*::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 8px; }
